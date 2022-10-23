@@ -2,4 +2,4 @@
 
 <h1>I AM WROKING WITH THERE CODES</h1/
 
-see him <h2>stratex</h2>
+see this stratex, i go update today this repository!!
