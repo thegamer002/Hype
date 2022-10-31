@@ -7,7 +7,6 @@ from _ba import chatmessage as msg
 
 class _cmd():
     
-    teams = ['brazil', 'latam', 'egypt', 'algeria', 'turkey', 'russia', 'italy']
     def _home():
         messages = _ba.get_chat_messages()
         if len(messages)>1:
@@ -30,7 +29,7 @@ class _cmd():
             a = lmsg.split(' ')[2:]
             
             if c == '/':
-                msg("Use /teams brazil,argentina to change teams and /timer to 10 minutes on screen")
+                msg("Use /teams /n /timer")
             
         
 
