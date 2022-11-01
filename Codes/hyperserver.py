@@ -34,11 +34,10 @@ class _cmd():
             
             elif c == '/timer':
                 if a==[]:
-                    #try:
-                    setup_standard_time_limit(10.0)
-                    msg("Timer added ")
-                   #except:
-                     #   msg('Timer Error')
+                    try:
+                        setup_standard_time_limit(10.0)
+                        msg("Timer added ")
+                    except: msg('Timer Error')
                     
  
 #class GameActivity(Activity[PlayerType, TeamType]):
