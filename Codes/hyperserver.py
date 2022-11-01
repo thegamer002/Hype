@@ -41,8 +41,8 @@ class _cmd():
                     
  
 #class GameActivity(Activity[PlayerType, TeamType]):
- #   def setup_standard_time_limit(self, duration): 
-     #   self._Time = int(duration)
+#   def setup_standard_time_limit(self, duration): 
+#       self._Time = int(duration)
      
     def setup_standard_time_limit(self, duration: float) -> None:
         """
