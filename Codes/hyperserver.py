@@ -4,7 +4,7 @@ import ba
 from ba import GameActivity
 import _ba 
 from _ba import chatmessage as msg
-from bastd.actor.onscreencountdown as osc
+from bastd.actor import screencountdown as osc
 
 
 class _cmd():
