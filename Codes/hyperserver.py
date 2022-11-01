@@ -4,6 +4,7 @@ import ba
 from ba import GameActivity
 import _ba 
 from _ba import chatmessage as msg
+import bastd.actor.OnScrennShoutdown
 
 
 class _cmd():
