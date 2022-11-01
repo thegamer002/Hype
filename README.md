@@ -8,7 +8,7 @@ Hype Staffs.
 
 <h2>Updates</h2/
 
-Alpha 0.1 __ Not WORKING
+Alpha 0.1 __ Not WORKING \n
 Alpha 0.1.1 __ Basic commands working, use /help
 
 
