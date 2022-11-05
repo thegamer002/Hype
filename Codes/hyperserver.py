@@ -33,7 +33,7 @@ class _cmd():
             
             elif c == '/timer':
                 msg("Timer added with sucess")
-                _ba.get_foreground_host_activity().setup_standard_time_limit(6)
+                _ba.getactivity().setup_standard_time_limit(6)
                 pass
                     
     
