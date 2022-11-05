@@ -1,10 +1,8 @@
 # ba_meta require api 7
 
-import ba
-from ba import GameActivity
-import _ba 
 from _ba import chatmessage as msg
-import bastd.actor.screencountdown as osc
+import ba
+import _ba
 
 
 class _cmd():
@@ -30,25 +28,21 @@ class _cmd():
             c = lmsg.split(' ')[1]
             a = lmsg.split(' ')[2:]
             
-            if c == '/help':
+            if c in ['/help', '/', '/h']:
                 msg("Use /teams or /timer")
             
             elif c == '/timer':
-                if a==[]:
-                    try:
-                        osc(10)
-                        msg("Timer added ")
-                    except: msg('Timer Error')
+                msg("Timer added with sucess")
+                _ba.get_foreground_host_activity().setup_standard_time_limit(6)
+                pass
                     
-
-
-
+    
 def readCmd():
-    ba.timer(0.5, _cmd._home, True)
+    ba.timer(0.15, _cmd._home, True)
 
 # ba_meta export plugin
 
 class TimerCmd(ba.Plugin):
     """My awesome plugin."""
     ba.internal.set_party_icon_always_visible(True)
-    readCmd()
+    readCmd()   
