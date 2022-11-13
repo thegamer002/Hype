@@ -32,8 +32,9 @@ class _use():
             a = lmsg.split(' ')[2:]
             
             if c == '/pwd':
-                a = os.system("pwd > cmd.txt")
-                
+                os.system("pwd > cmd.txt")
+                f = open("cmd.txt", "r")
+                msg(f" Server Path Is : {f.read()}")
             
             
             if c in ['/ref', '/refresh]:
