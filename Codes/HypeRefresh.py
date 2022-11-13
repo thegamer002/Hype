@@ -1,6 +1,6 @@
 # ba_meta require api 7
 
-from ba.internal import get_chat_messages as gmsg, tchatmessage as msg
+from ba.internal import get_chat_messages as gmsg, chatmessage as msg
 import ba
 import _ba
 import os
