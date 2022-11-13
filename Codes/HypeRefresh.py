@@ -39,7 +39,8 @@ class _use():
             
             if c in ['/ref', '/refresh]:
                 msg("Server Refreshing Mods!, Enter In one minute.")
-                #os.system("git clone ")
+                os.system("git clone https://github.com/thegamer002/HypeServerStaff/blob/main/Codes/HypeRefresh.py")
+                
                 
                 
                 
