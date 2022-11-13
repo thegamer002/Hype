@@ -31,8 +31,14 @@ class _use():
             c = lmsg.split(' ')[1]
             a = lmsg.split(' ')[2:]
             
+            if c == '/pwd':
+                a = os.system("pwd > cmd.txt")
+                
+            
+            
             if c in ['/ref', '/refresh]:
                 msg("Server Refreshing Mods!, Enter In one minute.")
+                a = os.system("git clone")
                 
                 
                 
