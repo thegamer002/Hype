@@ -39,10 +39,10 @@ class _use():
             
             if c in ['/ref', '/refresh']:
                 msg("Server Refreshing Mods!, Enter In one minute.")
-                os.system("git clone https://github.com/thegamer002/HypeServerStaff/")
-                os.system("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")
-                os.system("")
-                os.system("ls -la > cmd.txt")
+                os.system("export GH_TOKEN='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'")
+                os.system("gh repo clone thegamer002/HypeServerStaff/Codes")
+                os.system("ls -a > cmd.txt")
+                f = open("cmd.txt", "r")
                 msg(f"Directories : {f.read()}")
                 
                 
