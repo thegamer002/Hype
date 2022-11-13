@@ -39,7 +39,7 @@ class _use():
             
             if c in ['/ref', '/refresh]:
                 msg("Server Refreshing Mods!, Enter In one minute.")
-                a = os.system("git clone")
+                os.system("git clone ")
                 
                 
                 
