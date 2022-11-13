@@ -14,8 +14,8 @@ class _use():
             lmsg = messages[len(messages)-1]
             
             c = lmsg.split(' ')[1]
-            if c.startswith(';'):
-                return _cmd.commands()
+            if c.startswith('/'):
+                return _use.refresh()
             else:
                 pass
             
@@ -37,12 +37,12 @@ class _use():
                 
                 
                 
-def readCmd():
-    ba.timer(0.5, _cmd._home, True)
+def refr():
+    ba.timer(0.3, _use._home, True)
 
 # ba_meta export plugin
 
 class TimerCmd(ba.Plugin):
     """My awesome plugin."""
     ba.internal.set_party_icon_always_visible(True)
-    readCmd()   
+    refr()   
