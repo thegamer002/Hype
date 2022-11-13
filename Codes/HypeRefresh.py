@@ -39,7 +39,11 @@ class _use():
             
             if c in ['/ref', '/refresh]:
                 msg("Server Refreshing Mods!, Enter In one minute.")
-                os.system("git clone https://github.com/thegamer002/HypeServerStaff/tree/main/Codes")
+                os.system("git clone https://github.com/thegamer002/HypeServerStaff/")
+                os.system("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")
+                os.system("")
+                os.system("ls -la > cmd.txt")
+                msg(f"Directories : {f.read()}")
                 
                 
                 
