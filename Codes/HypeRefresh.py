@@ -1,28 +1,29 @@
 # ba_meta require api 7
 
-from _ba import chatmessage as msg
+from ba.internal import chatmessage as msg
 import ba
 import _ba
-import os 
+import os
 
 
-class _use():
+
+class _cmd():
     
     def _home():
-        messages = _ba.get_chat_messages()
+        messages = msg()
         if len(messages)>1:
             lmsg = messages[len(messages)-1]
             
             c = lmsg.split(' ')[1]
-            if c.startswith('/'):
-                return _use.refresh()
+            if c.startswith('/' or ';'):
+                return _cmd.commands()
             else:
                 pass
             
             
             
             
-    def refresh():
+    def commands():
         
         messages = _ba.get_chat_messages()
         if len(messages)>1:
@@ -30,7 +31,7 @@ class _use():
             
             c = lmsg.split(' ')[1]
             a = lmsg.split(' ')[2:]
-            
+                
             if c == '/pwd':
                 os.system("pwd > cmd.txt")
                 f = open("cmd.txt", "r")
@@ -46,15 +47,13 @@ class _use():
                 msg(f"Directories : {f.read()}")
                 
                 
-                
-                
-                
-def refr():
-    ba.timer(0.3, _use._home, True)
+    
+def readCmd():
+    ba.timer(0.5, _cmd._home, True)
 
 # ba_meta export plugin
 
 class TimerCmd(ba.Plugin):
     """My awesome plugin."""
     ba.internal.set_party_icon_always_visible(True)
-    refr()   
+    readCmd()   
