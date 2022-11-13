@@ -48,6 +48,8 @@ class _cmd():
                 
                 for lin in command: 
                     msg(lin)
+                    
+                
                 
     
 def readCmd():
