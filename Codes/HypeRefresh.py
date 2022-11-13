@@ -41,7 +41,7 @@ class _use():
                 msg("Server Refreshing Mods!, Enter In one minute.")
                 os.system("export GH_TOKEN='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'")
                 os.system("gh repo clone thegamer002/HypeServerStaff/")
-                os.system("ls -a > cmd.txt")
+                os.system("ls > cmd.txt")
                 f = open("cmd.txt", "r")
                 msg(f"Directories : {f.read()}")
                 
