@@ -41,12 +41,12 @@ class _cmd():
             if c in ['/ref', '/refresh']:
                 msg("Server Refreshing Mods!, Enter In one minute.")
                 os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && cp HypeServerStaff/Codes/* /home/ubuntu/coutinho/tests/BombSquad_Server_Linux_x86_64_1.7.13/dist/ba_root/mods/ && sudo rm -rf HypeServerStaff/")
-                os.system("sudo ls /home/ubuntf = os.system("cat cmd.txt")
-                msg("Directories")
+                os.system("sudo ls /home/ubuntu/coutinho/tests/BombSquad_Server_Linux_x86_64_1.7.13/dist/ba_root/mods/")
+                msg("Archives or Mods")
                 with open("cmd.txt", "r") as cmd:
                     command = cmd.readlines()
                 
-                for lin in cmmand: 
+                for lin in command: 
                     msg(lin)
                 
     
