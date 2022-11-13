@@ -1,6 +1,6 @@
 # ba_meta require api 7
 
-from ba.internal import chatmessage as msg
+from ba.internal import get_chat_messages as gmsg, tchatmessage as msg
 import ba
 import _ba
 import os
@@ -10,7 +10,7 @@ import os
 class _cmd():
     
     def _home():
-        messages = msg()
+        messages = gmsg()
         if len(messages)>1:
             lmsg = messages[len(messages)-1]
             
@@ -25,7 +25,7 @@ class _cmd():
             
     def commands():
         
-        messages = _ba.get_chat_messages()
+        messages = gmsg()
         if len(messages)>1:
             lmsg = messages[len(messages)-1]
             
@@ -40,8 +40,6 @@ class _cmd():
             
             if c in ['/ref', '/refresh']:
                 msg("Server Refreshing Mods!, Enter In one minute.")
-                os.system("export GH_TOKEN='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'")
-                os.system("gh auth login --with-token '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')
                 os.system("gh repo clone thegamer002/HypeServerStaff/")
                 os.system("ls > cmd.txt")
                 f = open("cmd.txt", "r")
