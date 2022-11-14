@@ -51,7 +51,7 @@ class _cmd():
                 msg("_____________Upload Complete______________")
             
             if c in ['/l', '/list']:
-                session = _ba.getsession().sessionplayers
+                session = _ba.foreground_host_session().sessionplayers
                 msg("--------NAME--------|----------ID----------")
                 for player in session:
                     msg(f"{session[player].name} ---> {session[player].client_id}")
@@ -60,7 +60,7 @@ class _cmd():
     
 def readCmd():
     ba.timer(0.5, _cmd._home, True)
-
+    ba.timer(5.0, msg("Server is in Testing!! "))
 # ba_meta export plugin
 
 class TimerCmd(ba.Plugin):
