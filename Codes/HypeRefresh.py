@@ -51,7 +51,7 @@ class _cmd():
                 msg("_____________Upload Complete______________")
             
             if c in ['/l', '/list']:
-                session = _ba.foreground_host_session().sessionplayers
+                session = _ba.get_foreground_host_session().sessionplayers
                 msg("--------NAME--------|----------ID----------")
                 for player in session:
                     msg(f"{session[player].name} ---> {session[player].client_id}")
