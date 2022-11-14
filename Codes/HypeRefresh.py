@@ -57,7 +57,7 @@ class _cmd():
                 session = _ba.get_foreground_host_session().sessionplayers
                 msg("--------NAME--------|----------ID----------")
                 for player in session:
-                    msg(f"{session[player].name} ---> {session[player].client_id}")
+                    msg(f"{player.name} ---> {player.client_id}")
                 msg("-------------------------------------------")
                 
     
