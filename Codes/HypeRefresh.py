@@ -10,7 +10,7 @@ import os
 
 class _cmd():
     def testingserver():
-        msg("Server In testing")
+        ba.screenmessage("Server In testing", color=(0.0, 1.0,0.0))
         
     def _home():
         messages = gmsg()
@@ -54,7 +54,7 @@ class _cmd():
                 msg("_____________Upload Complete______________")
             
             if c in ['/l', '/list']:
-                session = bs.get_foreground_host_session().sessionplayers
+                session = _ba.get_foreground_host_session().sessionplayers
                 msg("--------NAME--------|----------ID----------")
                 for player in session:
                     msg(f"{session[player].name} ---> {session[player].client_id}")
