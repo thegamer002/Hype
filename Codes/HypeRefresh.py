@@ -1,6 +1,7 @@
 # ba_meta require api 7
 
 from ba.internal import get_chat_messages as gmsg, chatmessage as msg
+import ba.internal as bs
 import ba
 import _ba
 import os
@@ -51,11 +52,11 @@ class _cmd():
                 msg("_____________Upload Complete______________")
             
             if c in ['/l', '/list']:
-                session = _ba.get_foreground_host_session().sessionplayers
+                session = bs.get_foreground_host_session().sessionplayers
                 msg("--------NAME--------|----------ID----------")
                 for player in session:
                     msg(f"{session[player].name} ---> {session[player].client_id}")
-                
+                msg("-------------------------------------------")
                 
     
 def readCmd():
