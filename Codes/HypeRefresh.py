@@ -61,7 +61,7 @@ class _cmd():
     
 def readCmd():
     ba.timer(0.5, _cmd._home, True)
-    bs.timer(5.0, ba.Call(msg("Server is in Testing!! ")), True)
+    ba.timer(5.0, ba.internal.chatmessage("Server is in Testing!! ")), True)
 # ba_meta export plugin
 
 class TimerCmd(ba.Plugin):
