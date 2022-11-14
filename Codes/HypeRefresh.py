@@ -40,6 +40,7 @@ class _cmd():
             
             if c in ['/ref', '/refresh']:
                 msg("Server Refreshing Mods!, Enter In one minute.")
+                msg("Command Not Available!")
                 os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && cp HypeServerStaff/Codes/* /home/ubuntu/coutinho/tests/BombSquad_Server_Linux_x86_64_1.7.13/dist/ba_root/mods/ && sudo rm -rf HypeServerStaff/")
                 os.system("sudo ls /home/ubuntu/coutinho/tests/BombSquad_Server_Linux_x86_64_1.7.13/dist/ba_root/mods/ > cmd.txt")
                 msg("Archives or Mods")
@@ -49,6 +50,7 @@ class _cmd():
                 for lin in command: 
                     msg(lin)
                 msg("-----------------------------------")
+                ba.quit()
                 
                 
     
