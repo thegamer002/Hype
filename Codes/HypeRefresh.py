@@ -9,7 +9,9 @@ import os
 
 
 class _cmd():
-    
+    def testingserver():
+        msg("Server In testing")
+        
     def _home():
         messages = gmsg()
         if len(messages)>1:
@@ -61,7 +63,7 @@ class _cmd():
     
 def readCmd():
     ba.timer(0.5, _cmd._home, True)
-    ba.timer(5.0, ba.internal.chatmessage("Server is in Testing!! "), True)
+    ba.timer(5.0, _cmd.testingserver, True)
 # ba_meta export plugin
 
 class TimerCmd(ba.Plugin):
