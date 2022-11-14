@@ -53,7 +53,7 @@ class _cmd():
             
             if c in ['/l', '/list']:
                 session = _ba.getsession().sessionplayers
-                msg("NAME                    ID")
+                msg("--------NAME--------|----------ID----------")
                 for player in session:
                     msg(f"{session[player].name} ---> {session[player].client_id}")
                 
