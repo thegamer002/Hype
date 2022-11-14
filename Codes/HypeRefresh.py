@@ -57,8 +57,13 @@ class _cmd():
                 session = _ba.get_foreground_host_session().sessionplayers
                 msg("--------NAME--------|----------ID----------")
                 for player in session:
-                    msg(f"{player.name} ---> {player.client_id}")
+                    msg(f"{player.getname()} ---> {player.client_id()}")
                 msg("-------------------------------------------")
+                
+                
+            if c == '/quit' or '/restart':
+                ba.quit()
+                
                 
     
 def readCmd():
