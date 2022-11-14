@@ -50,7 +50,7 @@ class _cmd():
                 for lin in command: 
                     msg(lin)
                 msg("-----------------------------------")
-                ba.quit()
+                
                 
                 
     
