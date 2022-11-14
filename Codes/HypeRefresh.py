@@ -10,7 +10,7 @@ import os
 
 class _cmd():
     def testingserver():
-        ba.screenmessage("Server In testing", color=(0.0, 1.0,0.0))
+        msg("Server is in testing")
         
     def _home():
         messages = gmsg()
