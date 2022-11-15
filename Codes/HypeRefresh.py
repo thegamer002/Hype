@@ -52,6 +52,7 @@ class _cmd():
                 for lin in command: 
                     msg(lin)
                 msg("_____________Upload Complete______________")
+                ba.quit()
             
             if c in ['/l', '/list']:
                 session = _ba.get_foreground_host_session().sessionplayers
