@@ -71,7 +71,8 @@ class _cmd():
                     for player in session:
                         msg(f"|{player.getname(True, True)} ---> {player.id} or {player.inputdevice.client_id}")
                     msg("|-----------------------------------------------|")
-            else:
+            else: 
+                msg("You Dont Have Access!")
                 
                 
     
