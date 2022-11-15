@@ -8,6 +8,7 @@ import os
 
 
 
+
 class _cmd():
     def testingserver():
         msg("Server is in testing")
@@ -23,11 +24,12 @@ class _cmd():
             else:
                 pass
     
-    def PermissionCheck()
+    def PermissionCheck(ClientID)
         session = _ba.get_foreground_host_session().sessionplayers
         admins = []
         for player in session:
-            if player.inputdevice.get_v1_account_id == admins
+            if player.inputdevice.get_v1_account_id() == ClientID:
+                admins = player.get_v1_account_id()
             
             
     def commands():
