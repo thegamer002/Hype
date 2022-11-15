@@ -31,7 +31,7 @@ class _cmd():
         for player in session:
             if player.inputdevice.get_v1_account_id() == ClientID:
                 admins = player.get_v1_account_id()
-        if admins in htgs.admins:
+        if admins in htgs.Admin:
             return True
         else: 
             return False
