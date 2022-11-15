@@ -25,7 +25,7 @@ class _cmd():
             else:
                 pass
     
-    def PermissionCheck(ClientID)
+    def PermissionCheck(ClientID):
         session = _ba.get_foreground_host_session().sessionplayers
         admins = []
         for player in session:
