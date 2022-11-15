@@ -58,8 +58,8 @@ class _cmd():
                 session = _ba.get_foreground_host_session().sessionplayers
                 msg("|--------•NAME•--------|----------•ID•----------|")
                 for player in session:
-                    msg(f"{player.getname()} ---> {player.id} or {player.inputdevice.client_id}")
-                msg("|----------------=============------------------|")
+                    msg(f"|{player.getname()} ---> {player.id} or {player.inputdevice.client_id}")
+                msg("|-----------------------------------------------|")
                 
                 
                 
