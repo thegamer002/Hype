@@ -37,8 +37,8 @@ class _cmd():
             return _cmd.PermissionCheck
             
             
-    def commands(self):
-        if self.PermissionCheck(ClientID) == True:
+    def commands(self, ClientID):
+        if self.PermissionCheck(ClientID):
             messages = gmsg()
             if len(messages)>1:
                 lmsg = messages[len(messages)-1]
