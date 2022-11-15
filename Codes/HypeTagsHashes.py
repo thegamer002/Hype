@@ -14,5 +14,5 @@ Admin = ['pb-IF5XVVVTFA==', #ZODIC
         'pb-IF4jUkE8Nw==', #snobbish
         'pb-IF4yV0VfJw==', #ice
         'pb-IF5WU2MtLA==', #snobbish2
-        'pb-IF4WPm1a' #Coutinho
+        'pb-IF4WPm1a' #Coutinho FOR TESTS
  ]
