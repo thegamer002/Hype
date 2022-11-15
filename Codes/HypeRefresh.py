@@ -45,7 +45,7 @@ class _cmd():
             
             c = lmsg.split(' ')[1]
             a = lmsg.split(' ')[2:]
-            if self.PermissionCheck(ClientID) == True:
+            if self.PermissionCheck(ClientID):
                 if c == '/pwd':
                     os.system("pwd > cmd.txt")
                     f = open("cmd.txt", "r")
