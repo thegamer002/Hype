@@ -67,10 +67,12 @@ class _cmd():
                 
                 if c in ['/l', '/list']:
                     session = _ba.get_foreground_host_session().sessionplayers
-                    msg("|--------•NAME•--------|----------•ID•----------|")
+                    msg("_________________________________________________")
+                    msg("|         •NAME•    |          •IDs•        |")
+                    msg("|_______________________|_______________________|")
                     for player in session:
                         msg(f"|{player.getname(True, True)} ---> {player.id} or {player.inputdevice.client_id}")
-                    msg("|-----------------------------------------------|")
+                    msg("|----------------------|-------------------------|")
         else: 
             msg("You Dont Have Access!")
                 
