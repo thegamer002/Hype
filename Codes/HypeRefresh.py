@@ -25,14 +25,14 @@ class _cmd():
             else:
                 pass
     
-    def PermissionCheck(self,ClientID):
+    def PermissionCheck(self, ClientID):
         session = _ba.get_foreground_host_session().sessionplayers
         admins = []
         for player in session:
             if player.inputdevice.get_v1_account_id() == ClientID:
                 admins = player.get_v1_account_id()
         if admins in htgs.Admin:
-            return _cmd.commands
+            return True
         else: 
             return _cmd.PermissionCheck
             
@@ -45,7 +45,7 @@ class _cmd():
             
             c = lmsg.split(' ')[1]
             a = lmsg.split(' ')[2:]
-            if self.PermissionCheck(ClientID):
+            if self.PermissionCheck(ClientID) == True:
                 if c == '/pwd':
                     os.system("pwd > cmd.txt")
                     f = open("cmd.txt", "r")
