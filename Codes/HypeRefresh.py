@@ -61,14 +61,12 @@ class _cmd():
                 msg("|----------------=============------------------|")
                 
                 
-            if c == '/quit' or '/restart':
-                ba.quit()
-                
                 
     
 def readCmd():
     ba.timer(0.5, _cmd._home, True)
     #ba.timer(5.0, _cmd.testingserver, False)
+    
 # ba_meta export plugin
 
 class TimerCmd(ba.Plugin):
