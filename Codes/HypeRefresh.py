@@ -44,15 +44,15 @@ class _cmd():
             if c in ['/ref', '/refresh']:
                 msg("Server Refreshing Mods!, Enter In one minute.")
                 os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/")
+                msg("_____________Upload Complete______________")
+                
+            if c == '/mods':
                 os.system("sudo ls ba_root/mods/ > cmd.txt")
                 msg("Archives or Mods")
                 with open("cmd.txt", "r") as cmd:
                     command = cmd.readlines()
-                
                 for lin in command: 
                     msg(lin)
-                msg("_____________Upload Complete______________")
-                
             
             if c in ['/l', '/list']:
                 session = _ba.get_foreground_host_session().sessionplayers
