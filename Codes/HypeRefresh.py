@@ -26,7 +26,8 @@ class _cmd():
     def PermissionCheck()
         session = _ba.get_foreground_host_session().sessionplayers
         admins = []
-        for player in sess
+        for player in session:
+            if player.inputdevice.get_v1_account_id == admins
             
             
     def commands():
