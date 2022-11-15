@@ -38,43 +38,45 @@ class _cmd():
             
             
     def commands(self, ClientID):
-        if self.PermissionCheck(ClientID):
-            messages = gmsg()
-            if len(messages)>1:
-                lmsg = messages[len(messages)-1]
+        messages = gmsg()
+        if len(messages)>1:
+            lmsg = messages[len(messages)-1]
+        
+            c = lmsg.split(' ')[1]
+            a = lmsg.split(' ')[2:]
+        
+            if c in ['/help', '/']:
+                msg("")
             
-                c = lmsg.split(' ')[1]
-                a = lmsg.split(' ')[2:]
+            elif c == '/pwd':
+                os.system("pwd > cmd.txt")
+                f = open("cmd.txt", "r")
+                msg(f" Server Path Is : {f.read()}")
             
-                if c == '/pwd':
-                    os.system("pwd > cmd.txt")
-                    f = open("cmd.txt", "r")
-                    msg(f" Server Path Is : {f.read()}")
+            
+            elif c in ['/ref', '/refresh']:
+                msg("Server Refreshing Mods!, Enter In one minute.")
+                os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/")
+                msg("_____________Upload Complete______________")
                 
-                
-                if c in ['/ref', '/refresh']:
-                    msg("Server Refreshing Mods!, Enter In one minute.")
-                    os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/")
-                    msg("_____________Upload Complete______________")
-                    
-                if c == '/mods':
-                    os.system("sudo ls ba_root/mods/ > cmd.txt")
-                    msg("Archives or Mods")
-                    with open("cmd.txt", "r") as cmd:
-                        command = cmd.readlines()
-                    for lin in command: 
-                        msg(lin)
-                
-                if c in ['/l', '/list']:
-                    session = _ba.get_foreground_host_session().sessionplayers
-                    msg("_________________________________________________")
-                    msg("|         •NAME•        |          •IDs•        |")
-                    msg("|_______________________|_______________________|")
-                    for player in session:
-                        msg(f"|{player.getname(True, True)} ---> {player.id} or {player.inputdevice.client_id}")
-                    msg("|_______________________________________________|")
-        else: 
-            msg("You Dont Have Access!")
+            elif c == '/mods':
+                os.system("sudo ls ba_root/mods/ > cmd.txt")
+                msg("Archives or Mods")
+                with open("cmd.txt", "r") as cmd:
+                    command = cmd.readlines()
+                for lin in command: 
+                    msg(lin)
+            
+            elif c in ['/l', '/list']:
+                session = _ba.get_foreground_host_session().sessionplayers
+                msg("_________________________________________________")
+                msg("|         •NAME•        |          •IDs•        |")
+                msg("|_______________________|_______________________|")
+                for player in session:
+                    msg(f"|{player.getname(True, True)} ---> {player.id} or {player.inputdevice.client_id}")
+                msg("|_______________________________________________|")
+         
+        
                 
                 
     
