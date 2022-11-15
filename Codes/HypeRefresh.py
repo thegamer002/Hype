@@ -38,14 +38,14 @@ class _cmd():
             
             
     def commands(self):
-        
-        messages = gmsg()
-        if len(messages)>1:
-            lmsg = messages[len(messages)-1]
+        if self.PermissionCheck(ClientID) == True:
+            messages = gmsg()
+            if len(messages)>1:
+                lmsg = messages[len(messages)-1]
             
-            c = lmsg.split(' ')[1]
-            a = lmsg.split(' ')[2:]
-            if self.PermissionCheck(ClientID) == True:
+                c = lmsg.split(' ')[1]
+                a = lmsg.split(' ')[2:]
+            
                 if c == '/pwd':
                     os.system("pwd > cmd.txt")
                     f = open("cmd.txt", "r")
@@ -71,8 +71,8 @@ class _cmd():
                     for player in session:
                         msg(f"|{player.getname(True, True)} ---> {player.id} or {player.inputdevice.client_id}")
                     msg("|-----------------------------------------------|")
-            else: 
-                msg("You Dont Have Access!")
+        else: 
+            msg("You Dont Have Access!")
                 
                 
     
