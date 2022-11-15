@@ -5,6 +5,7 @@ import ba.internal as bs
 import ba
 import _ba
 import os
+import HypeTagsHashes as htgs
 
 
 
@@ -30,6 +31,10 @@ class _cmd():
         for player in session:
             if player.inputdevice.get_v1_account_id() == ClientID:
                 admins = player.get_v1_account_id()
+        if admins in htgs.admins:
+            return True
+        else: 
+            return False
             
             
     def commands():
@@ -64,7 +69,7 @@ class _cmd():
                 session = _ba.get_foreground_host_session().sessionplayers
                 msg("|--------•NAME•--------|----------•ID•----------|")
                 for player in session:
-                    msg(f"|{player.getname()} ---> {player.id} or {player.inputdevice.client_id}")
+                    msg(f"|{player.getname(True, True)} ---> {player.id} or {player.inputdevice.client_id}")
                 msg("|-----------------------------------------------|")
                 
                 
