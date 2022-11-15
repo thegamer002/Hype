@@ -25,7 +25,7 @@ class _cmd():
             else:
                 pass
     
-    def PermissionCheck(ClientID):
+    def PermissionCheck(self,ClientID):
         session = _ba.get_foreground_host_session().sessionplayers
         admins = []
         for player in session:
@@ -45,7 +45,7 @@ class _cmd():
             
             c = lmsg.split(' ')[1]
             a = lmsg.split(' ')[2:]
-            if PermissionCheck(ClientID) == True:
+            if self.PermissionCheck(ClientID) == True:
                 if c == '/pwd':
                     os.system("pwd > cmd.txt")
                     f = open("cmd.txt", "r")
