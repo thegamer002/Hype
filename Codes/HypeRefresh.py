@@ -46,11 +46,12 @@ class _cmd():
             a = lmsg.split(' ')[2:]
         
             if c in ['/help', '/']:
-                msg("|pwd - To show current Path")
-                msg("|ref, refresh - to mods")
-                msg("|mods - To see ")
-                msg("|")
-                msg("|")
+                msg("___________________________________")
+                msg("|/pwd - To show current Path       |")
+                msg("|/ref, /refresh - To mods          |")
+                msg("|/mods - To see mods in directory  |")
+                msg("|/list, /l - To see players id     |")
+                msg("|/help - To see commands           |")
             
             elif c == '/pwd':
                 os.system("pwd > cmd.txt")
