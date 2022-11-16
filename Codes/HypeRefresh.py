@@ -52,6 +52,7 @@ class _cmd():
                 msg("|/mods - To see mods in directory  |")
                 msg("|/list, /l - To see players id     |")
                 msg("|/help - To see commands           |")
+                msg("|___________________________________|")
             
             elif c == '/pwd':
                 os.system("pwd > cmd.txt")
