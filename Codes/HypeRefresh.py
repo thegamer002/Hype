@@ -36,13 +36,13 @@ class _cmd():
             a = lmsg.split(' ')[2:]
             
             if c in ['/help', '/']:
-                msg("___________________________________")
-                msg("|/pwd - To show current Path       |")
-                msg("|/ref, /refresh - To mods          |")
-                msg("|/mods - To see mods in directory  |")
-                msg("|/list, /l - To see players id     |")
-                msg("|/help - To see commands           |")
-                msg("|__________________________________|")
+           
+                msg("/pwd - To show current Path       ")
+                msg("/ref, /refresh - To mods          ")
+                msg("/mods - To see mods in directory  ")
+                msg("/list, /l - To see players id     ")
+                msg("/help - To see commands           ")
+                
                 
             elif c == '/pwd':
                 os.system("pwd > cmd.txt")
@@ -57,15 +57,8 @@ class _cmd():
                 
                 
             elif c == '/mods':
-                mods = os.system("sudo ls ba_root/mods/ > cmd.txt ")
+                os.system("sudo ls ba_root/mods/ > cmd.txt ")
                 
-                if mods == '0':
-                    pass
-                
-                else:
-                    os.system("ls  > cmd.txt")
-                
-                msg("_______________________")
                 
                 with open("cmd.txt", "r") as cmd:
                     command = cmd.readlines()
@@ -90,6 +83,8 @@ class _cmd():
                     for player in session:
                         msg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
                     msg("===============")
+            
+            elif        
 
 
 
