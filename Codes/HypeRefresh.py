@@ -28,7 +28,7 @@ class _cmd():
     def commands():
         
         session = _ba.get_foreground_host_session().sessionplayers
-        session = _ba.get_foreground_host_session().sessionplayers
+        
         messages = gmsg()
         if len(messages)>1:
             lmsg = messages[len(messages)-1]
@@ -89,7 +89,7 @@ class _cmd():
                 if a == []:
                     msg("Please, Put Client_id")
                 else:
-                    
+                    session[a[0]].remove_from_game
 
 
 
