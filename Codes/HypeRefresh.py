@@ -27,7 +27,8 @@ class _cmd():
 
     def commands():
         
-        
+        session = _ba.get_foreground_host_session().sessionplayers
+        session = _ba.get_foreground_host_session().sessionplayers
         messages = gmsg()
         if len(messages)>1:
             lmsg = messages[len(messages)-1]
@@ -69,7 +70,7 @@ class _cmd():
                 
                 
             elif c in ['/l', '/list']:
-                session = _ba.get_foreground_host_session().sessionplayers
+                
                 
                 if session == []:
                     msg("Players Not Found")
@@ -84,7 +85,11 @@ class _cmd():
                         msg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
                     msg("===============")
             
-            elif        
+            elif c == '/rm' or '/remove':
+                if a == []:
+                    msg("Please, Put Client_id")
+                else:
+                    
 
 
 
