@@ -77,7 +77,7 @@ class _cmd():
                 else:
                     msg("== Name | IDs ==")
                     for player in session:
-                        msg(f"{player.getname(True, True)[0:9]} ----> {player.id}")
+                        msg(f"{player.getname(True, True)[0:9]} ----> {player}")
                     msg("")
                     msg("== For kick only ==")
                     
