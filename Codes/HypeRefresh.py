@@ -89,7 +89,7 @@ class _cmd():
                 if a == []:
                     msg("Please, Put Client_id")
                 else:
-                    session[a].remove_from_game()
+                    _ba.get_foreground_host_session().sessionplayers[a[0]].remove_from_game()
 
 
 
