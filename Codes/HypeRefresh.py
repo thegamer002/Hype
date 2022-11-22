@@ -87,7 +87,7 @@ class _cmd():
             
             elif c == '/rm' or '/remove':
                 if a == []:
-                    msg("Please, Put Client_id")
+                    msg("Please, Put player id")
                 else:
                     session[int(a)].remove_from_game()
 
