@@ -90,7 +90,7 @@ class _cmd():
                     msg("Please, Put Client_id")
                 else:
                     
-                    _ba.get_foreground_host_session().sessionplayers[a].remove_from_game
+                    _ba.get_foreground_host_session().sessionplayers[a].remove_from_game()
 
 
 
