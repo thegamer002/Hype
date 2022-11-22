@@ -88,7 +88,7 @@ class _cmd():
             
             elif c == '/rm' or '/remove':
                 
-                if a == []:
+                if a[0] == []:
                     msg("Please, Put player id")
                     
                 else:
