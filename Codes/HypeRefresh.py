@@ -92,7 +92,7 @@ class _cmd():
                     msg("Please, Put player id")
                     
                 else:
-                    session[int(a)].remove_from_game()
+                    _ba.get_foreground_host_session().sessionplayers[int(a[0])].remove_from_game()
 
 
 
