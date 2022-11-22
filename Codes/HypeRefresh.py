@@ -71,16 +71,14 @@ class _cmd():
                 
             elif c in ['/l', '/list']:
                 
-                
                 if session == []:
                     
                     msg("Players Not Found")
                 else:
-                    msg("== Name | IDs ==")
+                    msg("== Name ==|== IDs ==")
                     for player in session:
-                        n = 0
-                        msg(f"{player.getname(True, True)[0:9]} ----> {n}")
-                        n = n + 1
+                        msg(f"{player.getname(True, True)[0:9]} ----> {player.id}")
+                        
                     msg("")
                     msg("== For kick only ==")
                     
@@ -89,8 +87,10 @@ class _cmd():
                     msg("===============")
             
             elif c == '/rm' or '/remove':
+                
                 if a == []:
                     msg("Please, Put player id")
+                    
                 else:
                     session[int(a)].remove_from_game()
 
