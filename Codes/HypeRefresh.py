@@ -73,11 +73,14 @@ class _cmd():
                 
                 
                 if session == []:
+                    
                     msg("Players Not Found")
                 else:
                     msg("== Name | IDs ==")
                     for player in session:
-                        msg(f"{player.getname(True, True)[0:9]} ----> {player}")
+                        n = 0
+                        msg(f"{player.getname(True, True)[0:9]} ----> {n}")
+                        n = n + 1
                     msg("")
                     msg("== For kick only ==")
                     
