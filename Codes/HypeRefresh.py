@@ -36,16 +36,10 @@ class _cmd():
             c = lmsg.split(' ')[1]
             a = lmsg.split(' ')[2:]
             
-            if c in ['/help', '/']:
-           
-                msg("/pwd - To show current Path       ")
-                msg("/ref, /refresh - To mods          ")
-                msg("/mods - To see mods in directory  ")
-                msg("/list, /l - To see players id     ")
-                msg("/help - To see commands           ")
+            
                 
                 
-            elif c == '/pwd':
+            if c == '/pwd':
                 os.system("pwd > cmd.txt")
                 f = open("cmd.txt", "r")
                 msg(f" Server Path Is : {f.read()}")
@@ -85,16 +79,7 @@ class _cmd():
                     for player in session:
                         msg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
                     msg("===============")
-            
-            elif c == '/rm' or '/remove':
-                
-                if a[0] == []:
-                    msg("Please, Put player id")
-                    
-                else:
-                    _ba.get_foreground_host_session().sessionplayers[int(a[0])].remove_from_game()
-                    
-                    
+        
             elif c == '/restart':
                 mgr.restart()
 
