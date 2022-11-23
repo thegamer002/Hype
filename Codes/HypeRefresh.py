@@ -2,6 +2,7 @@
 
 #odules
 from ba.internal import get_chat_messages as gmsg, chatmessage as msg
+from _ba import _hooks
 import ba
 import _ba
 import os
