@@ -81,12 +81,12 @@ class _cmd():
                     msg("===============")
         
             elif c == '/restart':
-                mgr.restart()
+                ba.quit()
 
 
 
 def readCmd():
-    ba.timer(0.2, _cmd._home, True)
+    ba.timer(0.5, _cmd._home, True)
     #ba.timer(5.0, _cmd.testingserver, False)
     
 # ba_meta export plugin
