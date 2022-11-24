@@ -1,7 +1,7 @@
 # ba_meta require api 7
 
 #odules
-from ba.internal import get_chat_messages as gmsg, chatmessage as msg
+from ba.internal import get_chat_messages as gchatmsg, chatmessage as chatmsg
 from ba import _hooks
 import ba
 import _ba
@@ -14,11 +14,11 @@ class _cmd():
 
     def _home():
         
-        messages = gmsg()
+        messages = gchatmsg()
         if len(messages)>1:
-            lmsg = messages[len(messages)-1]
+            lchatmsg = messages[len(messages)-1]
             
-            c = lmsg.split(' ')[1]
+            c = lchatmsg.split(' ')[1]
             
             if c.startswith('/'):
                 return _cmd.commands()
@@ -30,26 +30,26 @@ class _cmd():
         
         session = _ba.get_foreground_host_session().sessionplayers
         
-        messages = gmsg()
+        messages = gchatmsg()
         if len(messages)>1:
-            lmsg = messages[len(messages)-1]
+            lchatmsg = messages[len(messages)-1]
 
-            c = lmsg.split(' ')[1]
-            a = lmsg.split(' ')[2:]
+            c = lchatmsg.split(' ')[1]
+            a = lchatmsg.split(' ')[2:]
             
-            
-            msg(str(_hooks.filter_chat_message(msg, client_id)))
+            help(_hooks.filter_chat_message)
+            chatmsg(str(_hooks.filter_chat_message(msg, -1)))
                 
             if c == '/pwd':
                 os.system("pwd > cmd.txt")
                 f = open("cmd.txt", "r")
-                msg(f" Server Path Is : {f.read()}")
+                chatmsg(f" Server Path Is : {f.read()}")
             
             
             elif c in ['/ref', '/refresh']:
-                msg("Server Refreshing Mods!, Enter In one minute.")
+                chatmsg("Server Refreshing Mods!, Enter In one minute.")
                 os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/")
-                msg("_____________Upload Complete______________")
+                chatmsg("_____________Upload Complete______________")
                 
                 
             elif c == '/mods':
@@ -59,27 +59,27 @@ class _cmd():
                 with open("cmd.txt", "r") as cmd:
                     command = cmd.readlines()
                 for lin in command: 
-                    msg(lin)
+                    chatmsg(lin)
                 
-                msg("===Archives or Mods===")
+                chatmsg("===Archives or Mods===")
                 
                 
             elif c in ['/l', '/list']:
                 
                 if session == []:
                     
-                    msg("Players Not Found")
+                    chatmsg("Players Not Found")
                 else:
-                    msg("== Name ==|== IDs ==")
+                    chatmsg("== Name ==|== IDs ==")
                     for player in session:
-                        msg(f"{player.getname(True, True)[0:9]} ----> {player.id}")
+                        chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.id}")
                         
-                    msg("")
-                    msg("== For kick only ==")
+                    chatmsg("")
+                    chatmsg("== For kick only ==")
                     
                     for player in session:
-                        msg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
-                    msg("===============")
+                        chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
+                    chatmsg("===============")
         
             elif c == '/restart':
                 ba.quit()
