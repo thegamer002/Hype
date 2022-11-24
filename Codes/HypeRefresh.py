@@ -38,7 +38,7 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             
             
-            chatmsg(_hooks.filter_chat_message(messages, 0))
+            if filter_chat_message(msg, client_id)
             #filter_chat_message(msg: str, client_id: int) -> str | None:    
             
             if c == '/pwd':
