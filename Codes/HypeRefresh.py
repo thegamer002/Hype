@@ -38,8 +38,9 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             
             
-            if _hooks.filter_chat_message(client_id) == 0 or -1:
-                chatmsg("corrrect")
+            chatmsg(str(_hooks.filter_chat_message(lchatmsg, client_id)))
+            
+            
             #filter_chat_message(msg: str, client_id: int) -> str | None:    
             
             if c == '/pwd':
