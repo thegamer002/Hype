@@ -39,7 +39,8 @@ class _cmd():
             
             help(_hooks.filter_chat_message)
             chatmsg(str(_hooks.filter_chat_message(msg, -1)))
-                
+            #filter_chat_message(msg: str, client_id: int) -> str | None:    
+            
             if c == '/pwd':
                 os.system("pwd > cmd.txt")
                 f = open("cmd.txt", "r")
