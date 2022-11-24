@@ -38,7 +38,7 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             
             
-            if filter_chat_message(client_id) == 0 or -1:
+            if _hooks.filter_chat_message(client_id) == 0 or -1:
                 chatmsg("corrrect")
             #filter_chat_message(msg: str, client_id: int) -> str | None:    
             
