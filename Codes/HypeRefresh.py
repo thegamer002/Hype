@@ -38,7 +38,7 @@ class _cmd():
             a = lmsg.split(' ')[2:]
             
             
-            msg(_hooks.filter_chat_message(msg: str, client_id: int) -> str | None)
+            msg(str(_hooks.filter_chat_message(msg, client_id)))
                 
             if c == '/pwd':
                 os.system("pwd > cmd.txt")
