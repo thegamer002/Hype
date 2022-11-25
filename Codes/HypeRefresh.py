@@ -85,7 +85,11 @@ class _cmd():
                     for player in session:
                         chatmsg(f"{player.getname[0:9]} ----> {player.get_v1_account_id()}")
                     chatmsg("===============")
-            elif c == '':
+                    
+                    
+            elif c == '/icons':
+                for icon in ba._accountv1.AccountV1Subsystem.get_purchased_icons:
+                    chatmsg(icon)
         
             elif c == '/restart' or '/res':
                 ba.quit()
