@@ -88,7 +88,7 @@ class _cmd():
                     
                     
             elif c == '/icons':
-                for icon in ba._accountv1.AccountV1Subsystem.get_purchased_icons:
+                for icon in ba._accountv1.AccountV1Subsystem.get_purchased_icons(0):
                     chatmsg(icon)
         
         
