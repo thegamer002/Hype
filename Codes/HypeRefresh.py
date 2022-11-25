@@ -38,10 +38,6 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             
             
-            chatmsg(str(_hooks.filter_chat_message(lchatmsg, client_id)))
-            
-            
-            #filter_chat_message(msg: str, client_id: int) -> str | None:    
             
             if c == '/pwd':
                 os.system("pwd > cmd.txt")
@@ -82,9 +78,16 @@ class _cmd():
                     
                     for player in session:
                         chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
+                    
+                    chatmsg("")    
+                    chatmsg("====PB-IDs=====")
+                    
+                    for player in session:
+                        chatmsg(f"{player.getname[0:9]} ----> {player.get_v1_account_id()}")
+                    
                     chatmsg("===============")
         
-            elif c == '/restart':
+            elif c == '/restart' or '/res':
                 ba.quit()
 
 
