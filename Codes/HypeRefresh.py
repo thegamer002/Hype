@@ -84,8 +84,8 @@ class _cmd():
                     
                     for player in session:
                         chatmsg(f"{player.getname[0:9]} ----> {player.get_v1_account_id()}")
-                    
                     chatmsg("===============")
+            elif c == '':
         
             elif c == '/restart' or '/res':
                 ba.quit()
