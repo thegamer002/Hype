@@ -91,6 +91,7 @@ class _cmd():
                 for icon in ba._accountv1.AccountV1Subsystem.get_purchased_icons:
                     chatmsg(icon)
         
+        
             elif c == '/restart' or '/res':
                 ba.quit()
 
