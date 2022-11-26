@@ -90,6 +90,9 @@ class _cmd():
         
             elif c == '/restart' or '/res':
                 ba.quit()
+            
+            else:
+                chatmsg("Command Error")
 
 
 
