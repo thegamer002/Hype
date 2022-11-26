@@ -91,7 +91,7 @@ class _cmd():
                     chatmsg("use /kick ID")
                 
                 else:
-                    ba.disconect_client(int(a), 300)
+                    ba.disconnect_client(int(a), 300)
                 
                 
         
