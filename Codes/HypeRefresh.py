@@ -83,7 +83,7 @@ class _cmd():
                     chatmsg("====PB-IDs=====")
                     
                     for player in session:
-                        chatmsg(f"{player.getname} ----> {player.get_v1_account_id()}")
+                        chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.get_v1_account_id()}")
                     chatmsg("===============")
                     
                     
