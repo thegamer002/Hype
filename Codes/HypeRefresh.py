@@ -86,7 +86,14 @@ class _cmd():
                         chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.get_v1_account_id()}")
                     chatmsg("===============")
                     
-                    
+            elif c in ['/kick', '/k']:
+                if a == []:
+                    chatmsg("use /kick ID")
+                
+                else:
+                    ba.disconect_client(int(a), 300)
+                
+                
         
             elif c == '/restart' or '/res':
                 ba.quit()
