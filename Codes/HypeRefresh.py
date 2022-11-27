@@ -38,7 +38,7 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             playername = lchatmsg.split(':')[0]
             
-            if playername in ['Coutinho', '\ue035Coutinho']:
+            if playername in ['\ue035Coutinho', '\ue064VinesCraft']:
                 
                 if c == '/pwd':
                     chatmsg(lchatmsg)
