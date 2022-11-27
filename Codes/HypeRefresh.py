@@ -36,7 +36,7 @@ class _cmd():
 
             c = lchatmsg.split(' ')[1]
             a = lchatmsg.split(' ')[2:]
-            playername = lchatmsg.split(' ')[0]
+            playername = lchatmsg.split(':')[0]
             
             
             if c == '/pwd':
