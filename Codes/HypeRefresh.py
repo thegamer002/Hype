@@ -36,10 +36,11 @@ class _cmd():
 
             c = lchatmsg.split(' ')[1]
             a = lchatmsg.split(' ')[2:]
-            
+            playername = lchatmsg.split(' ')[0]
             
             
             if c == '/pwd':
+                chatmsg(playername)
                 os.system("pwd > cmd.txt")
                 f = open("cmd.txt", "r")
                 chatmsg(f" Server Path Is : {f.read()}")
