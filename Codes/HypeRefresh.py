@@ -39,12 +39,10 @@ class _cmd():
             playername = lchatmsg.split(':')[0]
             
             if playername in ['\ue063VinesCraft']:
-                
-                if c == '/pwd':
-                    chatmsg(lchatmsg)
-                    os.system("pwd > cmd.txt")
-                    f = open("cmd.txt", "r")
-                    chatmsg(f" Server Path Is : {f.read()}")
+                if c == '/' or '/help':
+                    chatmsg("""/help --> to see commands
+                    /kick Player_id to kick Players
+                    /mods -""")
                 
                 
                 elif c in ['/ref', '/refresh']:
@@ -55,8 +53,6 @@ class _cmd():
                     
                 elif c == '/mods':
                     os.system("sudo ls ba_root/mods/ > cmd.txt ")
-                    
-                    
                     with open("cmd.txt", "r") as cmd:
                         command = cmd.readlines()
                     for lin in command: 
@@ -69,8 +65,8 @@ class _cmd():
                 elif c in ['/l', '/list']:
                     
                     if session == []:
-                        
                         chatmsg("Players Not Found")
+                        
                     else:
                         chatmsg("== Name == IDs ==")
                         for player in session:
