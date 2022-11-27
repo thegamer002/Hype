@@ -92,10 +92,9 @@ class _cmd():
                     if a == []:
                         chatmsg("use /kick ID")
                         
-                
                     else:
                         _ba.disconnect_client(int(a[0]))
-                    
+                        os.system(f"echo {a[1]} >> kickLog.txt")
                 
                 else:
                     chatmsg("Command Error")
