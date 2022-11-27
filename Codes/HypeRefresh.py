@@ -38,69 +38,67 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             playername = lchatmsg.split(':')[0]
             
-            
-            if c == '/pwd':
-                chatmsg(playername)
-                os.system("pwd > cmd.txt")
-                f = open("cmd.txt", "r")
-                chatmsg(f" Server Path Is : {f.read()}")
-            
-            
-            elif c in ['/ref', '/refresh']:
-                chatmsg("Server Refreshing Mods!, Enter In one minute.")
-                os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/")
-                chatmsg("_____________Upload Complete______________")
+            if playername in ['Coutinho']:
+                
+                if c == '/pwd':
+                    chatmsg(lchatmsg)
+                    os.system("pwd > cmd.txt")
+                    f = open("cmd.txt", "r")
+                    chatmsg(f" Server Path Is : {f.read()}")
                 
                 
-            elif c == '/mods':
-                os.system("sudo ls ba_root/mods/ > cmd.txt ")
-                
-                
-                with open("cmd.txt", "r") as cmd:
-                    command = cmd.readlines()
-                for lin in command: 
-                    chatmsg(lin)
-                
-                chatmsg("===Archives or Mods===")
-                
-                
-            elif c in ['/l', '/list']:
-                
-                if session == []:
+                elif c in ['/ref', '/refresh']:
+                    chatmsg("Server Refreshing Mods!, Enter In one minute.")
+                    os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/")
+                    chatmsg("_____________Upload Complete______________")
                     
-                    chatmsg("Players Not Found")
-                else:
-                    chatmsg("== Name ==|== IDs ==")
-                    for player in session:
-                        chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.id}")
+                    
+                elif c == '/mods':
+                    os.system("sudo ls ba_root/mods/ > cmd.txt ")
+                    
+                    
+                    with open("cmd.txt", "r") as cmd:
+                        command = cmd.readlines()
+                    for lin in command: 
+                        chatmsg(lin)
+                    
+                    chatmsg("===Archives or Mods===")
+                    
+                    
+                elif c in ['/l', '/list']:
+                    
+                    if session == []:
                         
-                    chatmsg("")
-                    chatmsg("== For kick only ==")
+                        chatmsg("Players Not Found")
+                    else:
+                        chatmsg("== Name ==|== IDs ==")
+                        for player in session:
+                            chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.id}")
+                            
+                        chatmsg("")
+                        chatmsg("== For kick only ==")
+                        
+                        for player in session:
+                            chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
+                        
+                        chatmsg("")    
+                        chatmsg("====PB-IDs=====")
+                        
+                        for player in session:
+                            chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.get_v1_account_id()}")
+                        chatmsg("===============")
+                        
+                elif c in ['/kick', '/k']:
+                    if a == []:
+                        chatmsg("use /kick ID")
+                        
+                
+                    else:
+                        _ba.disconnect_client(int(a[0]))
                     
-                    for player in session:
-                        chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
-                    
-                    chatmsg("")    
-                    chatmsg("====PB-IDs=====")
-                    
-                    for player in session:
-                        chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.get_v1_account_id()}")
-                    chatmsg("===============")
-                    
-            elif c in ['/kick', '/k']:
-                if a == []:
-                    chatmsg("use /kick ID")
                 
                 else:
-                    _ba.disconnect_client(int(a[0]))
-                
-                
-        
-            elif c == '/restart' or '/res':
-                ba.quit()
-            
-            else:
-                chatmsg("Command Error")
+                    chatmsg("Command Error")
 
 
 
