@@ -40,9 +40,13 @@ class _cmd():
             
             if playername in ['\ue063VinesCraft']:
                 if c == '/' or '/help':
-                    chatmsg("""/help --> to see commands
-                    /kick Player_id to kick Players
-                    /mods -""")
+                    chatmsg("""
+                    /help --> to see commands
+                    /kick PLAYER_ID --> to kick Players
+                    /mods --> to see currenty mods
+                    /list --> to see players_id, pb-ids
+                    /refresh or /ref --> to reload the mods
+                    /end --> for end game""")
                 
                 
                 elif c in ['/ref', '/refresh']:
