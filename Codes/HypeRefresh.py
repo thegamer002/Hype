@@ -60,7 +60,8 @@ class _cmd():
                     with open("cmd.txt", "r") as cmd:
                         command = cmd.readlines()
                     for lin in command: 
-                        chatmsg(lin)
+                        mods = lin.split(".py")[0]
+                        chatmsg(mods)
                     
                     chatmsg("===Archives or Mods===")
                     
@@ -71,22 +72,22 @@ class _cmd():
                         
                         chatmsg("Players Not Found")
                     else:
-                        chatmsg("== Name ==|== IDs ==")
+                        chatmsg("== Name == IDs ==")
                         for player in session:
                             chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.id}")
                             
-                        chatmsg("")
+                        
                         chatmsg("== For kick only ==")
                         
                         for player in session:
                             chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
                         
-                        chatmsg("")    
-                        chatmsg("====PB-IDs=====")
+                            
+                        chatmsg("==== PB-IDs =====")
                         
                         for player in session:
                             chatmsg(f"{player.getname(True, True)[0:9]} ----> {player.get_v1_account_id()}")
-                        chatmsg("===============")
+                        chatmsg("=================")
                         
                 elif c in ['/kick', '/k']:
                     if a == []:
