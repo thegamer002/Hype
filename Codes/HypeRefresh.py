@@ -51,7 +51,7 @@ class _cmd():
                 
                 elif c in ['/ref', '/refresh']:
                     chatmsg("Server Refreshing Mods!, Enter In one minute.")
-                    os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/")
+                    os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/HypeAdminCmds.py && sudo rm -rf HypeServerStaff/")
                     chatmsg("_____________Upload Complete______________")
                     
                     
@@ -91,11 +91,11 @@ class _cmd():
                         
                 elif c in ['/kick', '/k']:
                     if a == []:
-                        chatmsg("use /kick ID")
+                        chatmsg("use /kick ID MOTIVE")
                         
                     else:
                         _ba.disconnect_client(int(a[0]))
-                        os.system(f"echo {a[1]} >> kickLog.txt")
+                        os.system(f"echo {a[1]} >> ba_root/mods/kicklogs/kickLog.txt")
                 
                 else:
                     chatmsg("Command Error")
