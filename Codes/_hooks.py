@@ -11,8 +11,12 @@ def check_admin(client_id: int) -> bool:
                 return False
 
 def cmds(inp:str,clid:int):
+    session =  _ba.get_foreground_host_session().sessionplayers
     chtmsg = _ba.chatmessage
     scrmsg = _ba.screenmessage
+    
+     c = inp.split(" ")[0]
+     a = inp.split(" ")
     
     if inp in ["/check", "/c"]:
         scrmsg("Commands works sir!", color=(0.2,1,0.2),transient=True,clients=[clid])
@@ -97,7 +101,7 @@ def cmds(inp:str,clid:int):
 def filter_chat_message(msg: str, client_id: int) -> str | None:
     
     if msg[0] == "/":
-        if inpheck_admin(client_id=client_id):
+        if check_admin(client_id=client_id):
             print("admin just sent a command")
             cmds(inp=msg,clid=client_id)
             return None
