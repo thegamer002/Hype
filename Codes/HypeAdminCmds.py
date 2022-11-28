@@ -107,7 +107,7 @@ class _cmd():
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
                         chatmsg("Player Kicked")
-                        chatmsg(len(a))
+                        chatmsg(str(len(a)))
                         if len(a)==2:
                             _cmd.kick_server(int(a[0]), int(a[2]))
                         else:
