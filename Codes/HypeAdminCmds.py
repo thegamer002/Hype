@@ -1,8 +1,7 @@
 # ba_meta require api 7
 
-#odules
+#modules
 from ba.internal import get_chat_messages as gchatmsg, chatmessage as chatmsg
-from ba import _hooks
 import ba
 import _ba
 import os
@@ -99,7 +98,7 @@ class _cmd():
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
                         chatmsg("Player Kicked")
-                        _ba.disconnect_client(int(a[0]))
+                        _ba.disconnect_client(int(a[0]), int(a[2]*60))
                         
                 elif c == '/end':
                     try:
