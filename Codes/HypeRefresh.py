@@ -39,7 +39,7 @@ class _cmd():
             playername = lchatmsg.split(':')[0]
             
             if playername in ['\ue063VinesCraft']:
-                if c in ['/', '/help':]
+                if c in ['/', '/help']:
                     
                     chatmsg("/help --> to see commands")
                     chatmsg("/kick PLAYER_ID --> to kick Players")
