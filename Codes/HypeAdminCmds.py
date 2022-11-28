@@ -108,7 +108,7 @@ class _cmd():
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
                         chatmsg("Player Kicked")
-                        _ba.disconnect_client(int(a[0]), int(a[2]))
+                        _cmd.kick_server(int(a[0]), int(a[2]))
                         
                 elif c == '/end':
                     try:
