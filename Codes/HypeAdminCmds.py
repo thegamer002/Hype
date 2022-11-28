@@ -97,6 +97,8 @@ class _cmd():
                 elif c in ['/kick', '/k']:
                     if a == []:
                         chatmsg("use /kick ID MOTIVE")
+                    
+                    
                         
                     else:
                         motive = str(a[1])
