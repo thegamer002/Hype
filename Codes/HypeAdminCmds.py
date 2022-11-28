@@ -110,7 +110,7 @@ class _cmd():
                         
                         if len(a)==3:
                             _cmd.kick_server(int(a[0]), int(a[2]))
-                        else:
+                        elif len(a)==2:
                             _cmd.kick_server(int(a[0]))
                         
                 elif c == '/end':
