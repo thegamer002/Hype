@@ -24,7 +24,11 @@ class _cmd():
             else:
                 pass
 
-
+    def restart_server():
+        ba.screenmessage("Server Restarting, Please Enter in one minute")
+        ba.quit()
+    
+    
     def commands():
         
         session = _ba.get_foreground_host_session().sessionplayers
@@ -105,6 +109,8 @@ class _cmd():
                         _ba.get_foreground_host_activity().end_game()
                     except: chatmsg("Game Ended")
                         
+                elif c == '/restart':
+                    _home.restart_server()
                     
                 else:
                     chatmsg("Admin Command Error")
