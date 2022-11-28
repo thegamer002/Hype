@@ -56,9 +56,8 @@ class _cmd():
                 
                 
                 elif c in ['/ref', '/refresh']:
-                    chatmsg("Server Refreshing Mods!, Enter In one minute.")
-                    os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && mv ba_root/mods/HypeRefresh.py ba_root/mods/HypeAdminCmds.py  && sudo rm -rf HypeServerStaff/ && sudo rm -f ba_root/mods/HypeRefresh.py")
-                    chatmsg("_____________Upload Complete______________")
+                    os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/ && sudo rm -f ba_root/mods/HypeRefresh.py")
+                    chatmsg("===== Upload Complete ====")
                     
                     
                 elif c == '/mods':
