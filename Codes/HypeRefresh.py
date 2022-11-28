@@ -96,7 +96,7 @@ class _cmd():
                     else:
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
-                        chatmsg(f"{session[int(a[0])].getname(True, True)} Kicked")
+                        chatmsg("Player Kicked")
                         _ba.disconnect_client(int(a[0]))
                         
                 elif c == '/end':
