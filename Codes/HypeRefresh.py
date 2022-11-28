@@ -99,8 +99,9 @@ class _cmd():
                         _ba.disconnect_client(int(a[0]))
                         
                 elif c == '/end':
-                    ba.screenmessage("Game ending", (0,1,0))
-                    _ba.get_foreground_host_activity().end_game()
+                    try:
+                        ba.screenmessage("Game ending", (0,1,0))
+                        _ba.get_foreground_host_activity().end_game()
                     
                     
                 else:
