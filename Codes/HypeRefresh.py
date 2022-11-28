@@ -95,12 +95,12 @@ class _cmd():
                         
                     else:
                         os.system(f"echo {a[1]} >> kickLogs.txt")
-                        chatmsg(f"{session[a[0]].getname(True, True)} Kicked")
+                        chatmsg(f"{session[int(a[0])].getname(True, True)} Kicked")
                         _ba.disconnect_client(int(a[0]))
                         
                 elif c == '/end':
                     ba.screenmessage("Game ending", (0,1,0))
-                    _ba.get_foreground_host_session().end_game()
+                    _ba.get_foreground_host_session().ended_game()
                     
                     
                 else:
