@@ -94,7 +94,8 @@ class _cmd():
                         chatmsg("use /kick ID MOTIVE")
                         
                     else:
-                        os.system(f"echo {a[1]} >> kickLogs.txt")
+                        motive = str(a[1])
+                        os.system(f"echo {motive} >> kickLogs.txt")
                         chatmsg(f"{session[int(a[0])].getname(True, True)} Kicked")
                         _ba.disconnect_client(int(a[0]))
                         
