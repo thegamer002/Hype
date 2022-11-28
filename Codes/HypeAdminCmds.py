@@ -60,19 +60,7 @@ class _cmd():
                 
                 elif c in ['/ref', '/refresh']:
                     os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/ && sudo rm -f ba_root/mods/HypeRefresh.py")
-                    chatmsg("===== Upload Complete ====")
-                    
-                    
-                elif c == '/mods':
-                    os.system("sudo ls ba_root/mods/ > cmd.txt ")
-                    with open("cmd.txt", "r") as cmd:
-                        command = cmd.readlines()
-                    for lin in command: 
-                        mods = lin.split(".py")[0]
-                        chatmsg(mods)
-                    
-                    chatmsg("===Archives or Mods===")
-                    
+
                     
                 elif c in ['/l', '/list']:
                     
@@ -99,10 +87,8 @@ class _cmd():
                         
                 elif c in ['/kick', '/k']:
                     if a == []:
-                        chatmsg("use /kick ID MOTIVE")
+                        chatmsg("use /kick ID MOTIVE BAN-TIME -> Optional")
                     
-                    
-                        
                     else:
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
@@ -112,6 +98,7 @@ class _cmd():
                             _cmd.kick_server(int(a[0]), int(a[2]))
                         elif len(a)==2:
                             _cmd.kick_server(int(a[0]))
+                            
                         
                 elif c == '/end':
                     try:
