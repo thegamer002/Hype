@@ -100,7 +100,7 @@ class _cmd():
                         
                 elif c == '/end':
                     ba.screenmessage("Game ending", (0,1,0))
-                    _ba.get_foreground_host_session().ended_game()
+                    _ba.get_foreground_host_activity().end_game()
                     
                     
                 else:
