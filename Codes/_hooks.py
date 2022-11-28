@@ -2,7 +2,7 @@
 def check_admin(client_id: int) -> bool:
     from HypeHashes import admin as idz
     for p in _ba.get_foreground_host_session().sessionplayers:
-        if p.inputdevice.client_id == client_id:
+        if p.cutdevice.client_id == client_id:
             if p.get_v1_account_id() in idz:
                 return True
                 print(dir(p))
@@ -16,12 +16,12 @@ def cmds(inp:str,clid:int):
     scrmsg = _ba.screenmessage
     
      c = inp.split(" ")[0]
-     a = inp.split(" ")
+     a = inp.split(" ")[1:]
     
-    if inp in ["/check", "/c"]:
+    if c in ["/check", "/c"]:
         scrmsg("Commands works sir!", color=(0.2,1,0.2),transient=True,clients=[clid])
     
-    if inp in ['/', '/help']:
+    if c in ['/', '/help']:
         
         chtmsg("/help --> to see commands")
         chtmsg("/kick PLAYER_ID Motive Ban-Time--> to kick Players")
@@ -32,10 +32,10 @@ def cmds(inp:str,clid:int):
         chtmsg("/restart --> To restart the server")
     
     
-    elif inp in ['/ref', '/refresh']:
+    elif c in ['/ref', '/refresh']:
         os.system("sudo rm -rf HypeServerStaff/ && gh repo clone thegamer002/HypeServerStaff && sudo cp HypeServerStaff/Codes/* ba_root/mods/ && sudo rm -rf HypeServerStaff/ && sudo rm -f ba_root/mods/HypeRefresh.py
         
-    elif inp in ['/l', '/list']:
+    elif c in ['/l', '/list']:
         
         if session == []:
             chtmsg("Players Not Found")
@@ -49,7 +49,7 @@ def cmds(inp:str,clid:int):
             chtmsg("== For kick only ==")
             
             for player in session:
-                chtmsg(f"{player.getname(True, True)[0:9]} ----> {player.inputdevice.client_id}")
+                chtmsg(f"{player.getname(True, True)[0:9]} ----> {player.cutdevice.client_id}")
             
                 
             chtmsg("==== PB-IDs =====")
@@ -58,7 +58,7 @@ def cmds(inp:str,clid:int):
                 chtmsg(f"{player.getname(True, True)[0:9]} ----> {player.get_v1_account_id()}")
             chtmsg("=================")
             
-    elif inp in ['/kick', '/k']:
+    elif c in ['/kick', '/k']:
         if a == []:
             chtmsg("use /kick ID MOTIVE BAN-TIME -> Optional")
         
@@ -73,17 +73,17 @@ def cmds(inp:str,clid:int):
                 _cmd.kick_server(int(a[0]))
                 
             
-    elif inp == '/end':
+    elif c == '/end':
         try:
             _ba.get_foreground_host_activity().end_game()
         except: chtmsg("Game Ended")
         
             
-    elif inp == '/restart':
+    elif c == '/restart':
         _cmd.restart_server()
         
     
-    elif inp == '/kicklog':
+    elif c == '/kicklog':
         if a ==[]:
             chtmsg("use view or delete")
             
