@@ -41,17 +41,18 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             playername = lchatmsg.split(':')[0]
             
-            if playername in ['\ue063VinesCraft','Coutinho']:
+            if playername in ['\ue063VinesCraft']:
                 chatmsg(f"Ok, {playername} Admin!")
                 
                 if c in ['/', '/help']:
                     
                     chatmsg("/help --> to see commands")
-                    chatmsg("/kick PLAYER_ID Motive --> to kick Players")
+                    chatmsg("/kick PLAYER_ID Motive Ban-Time--> to kick Players")
                     chatmsg("/mods --> to see currenty mods")
                     chatmsg("/list --> to see players_id, pb-ids")
                     chatmsg("/refresh or /ref --> to reload the mods")
                     chatmsg("/end --> for end game")
+                    chatmsg("/restart --> To restart the server")
                 
                 
                 elif c in ['/ref', '/refresh']:
@@ -110,14 +111,12 @@ class _cmd():
                     except: chatmsg("Game Ended")
                         
                 elif c == '/restart':
-                    _home.restart_server()
+                    _cmd.restart_server()
                     
                 else:
                     chatmsg("Admin Command Error")
                     
-            else:
-                chatmsg("You Don't Have Permission To use Commands")
-
+            
 
 
 def readCmd():
