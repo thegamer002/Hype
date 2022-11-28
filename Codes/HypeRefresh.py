@@ -108,7 +108,10 @@ class _cmd():
                         
                     
                 else:
-                    chatmsg("Command Error")
+                    chatmsg("Admin Command Error")
+                    
+            else:
+                chatmsg("You Don't Have Permission To use Commands")
 
 
 
