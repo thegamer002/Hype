@@ -102,7 +102,7 @@ class _cmd():
                     try:
                         ba.screenmessage("Game ending", (0,1,0))
                         _ba.get_foreground_host_activity().end_game()
-                    except: ba.screenmessage("Game ending", (0,1,0))
+                    except: chatmsg("Game Ended")
                         
                     
                 else:
