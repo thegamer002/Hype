@@ -101,6 +101,9 @@ class _cmd():
                     
                         
                     else:
+                        if a[2] == []:
+                            a[2] = 5
+                            
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
                         chatmsg("Player Kicked")
