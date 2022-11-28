@@ -23,7 +23,10 @@ class _cmd():
                 return _cmd.commands()
             else:
                 pass
-
+    def kick_server(id, ban_time=5):
+        _ba.disconnect_client(id, ban_time*60)
+        
+        
     def restart_server():
         ba.screenmessage("Server Restarting, Please Enter in one minute")
         ba.quit()
@@ -101,13 +104,11 @@ class _cmd():
                     
                         
                     else:
-                        if a[2] == []:
-                            a[2] = 5
                             
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
                         chatmsg("Player Kicked")
-                        _ba.disconnect_client(int(a[0]), int(a[2]*60))
+                        _ba.disconnect_client(int(a[0]), int(a[2]))
                         
                 elif c == '/end':
                     try:
