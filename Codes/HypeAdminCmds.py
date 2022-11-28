@@ -120,6 +120,16 @@ class _cmd():
                         
                 elif c == '/restart':
                     _cmd.restart_server()
+                
+                elif c == '/kicklog':
+                    
+                    with open("kickLogs.txt", "r") as log:
+                        kicklog = log.readlines()
+                        
+                    for line in kicklog:
+                        chatmsg(line)
+                    
+                    
                     
                 else:
                     chatmsg("Admin Command Error")
