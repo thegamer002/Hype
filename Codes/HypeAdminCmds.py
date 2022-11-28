@@ -104,11 +104,14 @@ class _cmd():
                     
                         
                     else:
-                            
                         motive = str(a[1])
                         os.system(f"echo {motive} >> kickLogs.txt")
                         chatmsg("Player Kicked")
-                        _cmd.kick_server(int(a[0]), int(a[2]))
+                        
+                        if len(a.split(" "))>1:
+                            _cmd.kick_server(int(a[0]), int(a[2]))
+                        else:
+                            _cmd.kick_server(int(a[0]))
                         
                 elif c == '/end':
                     try:
