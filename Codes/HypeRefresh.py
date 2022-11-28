@@ -39,14 +39,14 @@ class _cmd():
             playername = lchatmsg.split(':')[0]
             
             if playername in ['\ue063VinesCraft']:
-                if c == '/' or '/help':
-                    chatmsg("""
-                    /help --> to see commands
-                    /kick PLAYER_ID --> to kick Players
-                    /mods --> to see currenty mods
-                    /list --> to see players_id, pb-ids
-                    /refresh or /ref --> to reload the mods
-                    /end --> for end game""")
+                if c in ['/', '/help':]
+                    
+                    chatmsg("/help --> to see commands")
+                    chatmsg("/kick PLAYER_ID --> to kick Players")
+                    chatmsg("/mods --> to see currenty mods")
+                    chatmsg("/list --> to see players_id, pb-ids")
+                    chatmsg("/refresh or /ref --> to reload the mods")
+                    chatmsg("/end --> for end game")
                 
                 
                 elif c in ['/ref', '/refresh']:
@@ -96,7 +96,12 @@ class _cmd():
                     else:
                         _ba.disconnect_client(int(a[0]))
                         os.system(f"echo {a[1]} >> ba_root/mods/kicklogs/kickLog.txt")
-                
+                        
+                elif c == '/end':
+                    ba.screenmessage("Game ending", (0,1,0))
+                    _ba.get_foreground_host_session().end_game()
+                    
+                    
                 else:
                     chatmsg("Command Error")
 
