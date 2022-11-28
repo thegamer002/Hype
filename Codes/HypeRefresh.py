@@ -39,10 +39,12 @@ class _cmd():
             playername = lchatmsg.split(':')[0]
             
             if playername in ['\ue063VinesCraft','Coutinho']:
+                chatmsg(f"Ok, {playername} Admin!")
+                
                 if c in ['/', '/help']:
                     
                     chatmsg("/help --> to see commands")
-                    chatmsg("/kick PLAYER_ID --> to kick Players")
+                    chatmsg("/kick PLAYER_ID Motive --> to kick Players")
                     chatmsg("/mods --> to see currenty mods")
                     chatmsg("/list --> to see players_id, pb-ids")
                     chatmsg("/refresh or /ref --> to reload the mods")
@@ -101,7 +103,6 @@ class _cmd():
                         
                 elif c == '/end':
                     try:
-                        ba.screenmessage("Game ending", (0,1,0))
                         _ba.get_foreground_host_activity().end_game()
                     except: chatmsg("Game Ended")
                         
