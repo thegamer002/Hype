@@ -44,7 +44,7 @@ class _cmd():
             a = lchatmsg.split(' ')[2:]
             playername = lchatmsg.split(':')[0]
             
-            if playername in ['\ue063VinesCraft']:
+            if playername in ['\ue063VinesCraft','Coutinho']:
                 chatmsg(f"Ok, {playername} Admin!")
                 
                 if c in ['/', '/help']:
