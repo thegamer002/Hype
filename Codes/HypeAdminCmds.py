@@ -111,12 +111,18 @@ class _cmd():
                     
                 
                 elif c == '/kicklog':
-                    
-                    with open("kickLogs.txt", "r") as log:
-                        kicklog = log.readlines()
+                    if a ==[]:
+                        chatmsg("use view or delete")
                         
-                    for line in kicklog:
-                        chatmsg(line)
+                    elif a[0] == 'view':
+                        with open("kickLogs.txt", "r") as log:
+                            kicklog = log.readlines()
+                        
+                        for line in kicklog:
+                            chatmsg(line)
+                            
+                    elif a[0] == 'delete':
+                        os.system("sudo rm -f kickLogs.txt")
                     
                     
                 else:
