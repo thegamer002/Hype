@@ -104,9 +104,11 @@ class _cmd():
                     try:
                         _ba.get_foreground_host_activity().end_game()
                     except: chatmsg("Game Ended")
+                    
                         
                 elif c == '/restart':
                     _cmd.restart_server()
+                    
                 
                 elif c == '/kicklog':
                     
@@ -117,9 +119,8 @@ class _cmd():
                         chatmsg(line)
                     
                     
-                    
                 else:
-                    chatmsg("Admin Command Error")
+                    chatmsg("Command Error")
                     
             
 
