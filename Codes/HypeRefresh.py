@@ -94,8 +94,9 @@ class _cmd():
                         chatmsg("use /kick ID MOTIVE")
                         
                     else:
+                        os.system(f"echo {a[1]} >> kickLogs.txt")
+                        chatmsg(f"{session[a[0]].getname(True, True)} Kicked")
                         _ba.disconnect_client(int(a[0]))
-                        os.system(f"echo {a[1]} >> ba_root/mods/kicklogs/kickLog.txt")
                         
                 elif c == '/end':
                     ba.screenmessage("Game ending", (0,1,0))
