@@ -102,7 +102,8 @@ class _cmd():
                     try:
                         ba.screenmessage("Game ending", (0,1,0))
                         _ba.get_foreground_host_activity().end_game()
-                    
+                    except: chatmsg("End game Error")
+                        
                     
                 else:
                     chatmsg("Command Error")
