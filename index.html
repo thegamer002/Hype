@@ -40,8 +40,13 @@
     <py-script>
         def rank_show():
             rank = 99
+            players = []
             for player in range(rank):
-                return str(player) +"#. COUTINHO" 
+                players = players.append(str(player) +"#. COUTINHO")
+                
+            for p in players:
+                print(p)
+                
         def stats():
             m = Element("border")
             m.element.innerHTML = f"<p><b>{rank_show()}</b></p>"
