@@ -9,6 +9,10 @@
             body {
                 background-color: black;
             }
+            body button {
+                border-radius: 10px;
+            }
+            }
             .border py-script {
                 background-color: orange;
                 
@@ -34,10 +38,10 @@
     
                     def show(self):
                         m = Element("border")
-                        m.element.innerHTML = "<p>HELLO</p>
-                        print(f"{self.stats}"
+                        m.element.innerHTML = "<p>HELLO</p>"
+                        print(f"{self.stats}")
             </py-script>
         </div>
-        <button py-click="html().show()" id="mdiv"></button>
+        <button py-click="html().show()" id="mdiv">SAY HELLO</button>
     </body>
 </html>
