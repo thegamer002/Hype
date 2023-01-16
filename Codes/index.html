@@ -27,10 +27,13 @@
         
         <div class="border">
             <h1> Welcome to Hype Website </h1>
+            <py-config>
+                packages = ["Hype"]
+            </py-config>
             <py-script>
-            - Hype
-            print(dir(Hype))
-            Hype.html().show()
+                - Hype
+                print(dir(Hype))
+                Hype.html().show()
             </py-script>
         </div>
     </body>
