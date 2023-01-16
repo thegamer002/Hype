@@ -16,11 +16,8 @@
                 padding: 10px;
                 border-radius: 5px;
                 }
-            .border py-script  {
-                background-color: orange;
-                
-            }
             .border  {
+                color: black;
                 background-color: white;
                 border: 10px outset red;
                 text-align: center;
@@ -30,8 +27,13 @@
             
         </style>
     </head>
+    <py-script>
+        def stats():
+            m = Element("border")
+            m
+    </py-script>
     <body>
-        <div class="border">
+        <div id="border">
             <h1> Welcome to Hype Website </h1>
         </div>
     </body>
