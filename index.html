@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Hype Website</title>
+        <style>
+            body {
+                background-color: black;
+            }
+            body button {
+                border: 5px outset red;
+                background-color: white;
+                margin: 5px;
+                padding: 10px;
+                border-radius: 5px;
+                }
+            #border {
+                margin: 5px;
+                border: 10px outset red;
+                border-radius: 30px;
+            }
+            .welcome {
+                color: black;
+                background-color: white;
+                border: 10px outset red;
+                text-align: center;
+                border-radius: 15px;
+                }
+            
+            
+        </style>
+    </head>
+    <py-script>
+        def rank_show():
+            rank = 99
+            for player in range(rank):
+                return str(player) +"#. COUTINHO" 
+        def stats():
+            m = Element("border")
+            m.element.innerHTML = f"<p><b>{rank_show()}</b></p>"
+    </py-script>
+    <body>
+        <div class="welcome">
+            <h1> Welcome to Hype Website </h1>
+        </div>
+        <div id="border"></div>
+        <button py-click="stats()" id="mdiv">RANK</button>
+    </body>
+</html>
