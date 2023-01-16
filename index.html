@@ -32,6 +32,11 @@
             
         </style>
     </head>
+    <script>
+    const res = await fetch("file.json");
+    const data = await res.json();
+    console.log(data);
+    </script>
     <py-script>
         def rank_show():
             rank = 99
