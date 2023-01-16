@@ -44,11 +44,10 @@
             for player in range(rank):
                 players = players.append(str(player) +"#. COUTINHO")
                 
-            return str(players)
-                
         def stats():
             m = Element("border")
             m.element.innerHTML = f"<p>{rank_show()}</p>"
+            print(rank_show())
     </py-script>
     <body>
         <div class="welcome">
