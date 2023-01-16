@@ -5,7 +5,8 @@ class html:
         self.stats = "!!RANK OF STATS IS HERE!!"
     
     def show(self):
-        print("""<div class='hype'>
-        
-        
+        print(f"""
+        <div class='hype'>
+            {self.stats}
+            
         </div>""")
